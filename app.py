@@ -9,32 +9,33 @@ A Mad-lib-like program for a school project."""
 import time,os,sys
 from time import sleep
 
+
+
 # Operation
 
-def typingPrint(text):
-  for character in text:
-    sys.stdout.write(character)
-    sys.stdout.flush()
-    time.sleep(0.05)
-  
-def typingInput(text):
-  for character in text:
-    sys.stdout.write(character)
-    sys.stdout.flush()
-    time.sleep(0.05)
-  value = input()  
-  return value
+#-- Preference Add-ons
 
+  
+
+#-- Q.O.L. Add-on -+ Defines a function to clear the screen
 def clr():
    os.system('cls')
 
+
+#CLEAR SCREEN ONCE EXECUTED
+clr()
+
 # Get user initial input
 
-user_start = str.lower(input("Would you like to start the program? (y/n): "))
+#-- Asks user if they would like to start the story
+user_start = str.lower(input("Would you like to start the story? (y/n): "))
 
-# User start option
 
 
+
+# User start user_option
+
+#-- Determines if user starts program. Continues on yes, exits on no
 if user_start == "y":
     clr()
 elif user_start == "n":
@@ -46,21 +47,50 @@ elif user_start == "n":
 sleep(3)
 
 
+
+
+
 # Welcome and greet user
 
-typingPrint("Welcome to the interactive Mad-Lib like story!")
-sleep(0.3)
-typingPrint(" You will be able to change how the story goes and receive different outcomes!")
+#-- Initial greeting and introduction
+print("Welcome to the interactive Mad-Lib like story!")
+sleep(3)
+print("\nYou will be able to change how the story goes and receive different outcomes!")
+sleep(4)
+
+
 
 # Get user secondary input
 
+#-- User will decide if the story
+user_option = str.lower(input("\nFirst, choose the story of 'The Serpent and the Tree', or 'The Raccoon and the Tree'. (serpent/raccoon): "))
+
+# Build story - Option 1
+
+if user_option == "serpent":
+   clr()
+   sleep(1.5)
+   print("\nThe serpent was very exhausted slithering all day and decides to rest next to a tree.")
+   sleep(1)
 
 
-# Build story
+tree_op1 = str.lower(input("\nThe tree notices this. Should he inquiry the snake? (y/n): "))
+
+
+sleep(2)
+
+if tree_op1 == "y":
+   print("\n'Why are you so tired, little one?' The tree says to the serpent.")
+   sleep(2)
+   print("\n'I'm tired of moving all the time, I wish I was like you so all I could do is wait', the serpent complains.")
+   
 
 
 
 # Display results
+
+
+
 
 
 
