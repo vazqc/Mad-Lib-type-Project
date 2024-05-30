@@ -60,40 +60,33 @@ sleep(4)
 
 
 
-# Get user secondary input
+# Get user story input
 
-#-- User will decide if the story
-user_option = str.lower(input("\nFirst, choose the story of 'The Serpent and the Tree', or 'The Raccoon and the Tree'. (serpent/raccoon): "))
-
-# Build story - Option 1
-
-if user_option == "serpent":
-   clr()
-   sleep(1.5)
-   print("\nThe serpent was very exhausted slithering all day and decides to rest next to a tree.")
-   sleep(1)
+animal = input("Enter an animal: ")
+object = input("Enter an object: ")
+adjective = input("Enter the first adjective")
+place = input("Enter a place: ")
+adjective2 = input("Enter a second adjective")
+adjective3 = input("Enter a third adjective: ")
 
 
-tree_op1 = str.lower(input("\nThe tree notices this. Should he inquiry the snake? (y/n): "))
-
-
-sleep(2)
-
-if tree_op1 == "y":
-   print("\n'Why are you so tired, little one?' The tree says to the serpent.")
-   sleep(2)
-   print("\n'I'm tired of moving all the time, I wish I was like you so all I could do is wait', the serpent complains.")
-   
+story = f'Once upon a time, there was a(n) {animal} who was very {adjective}. The {animal} was approached by a moving {object}. ``How do you do {animal}?`` the {object} said.'
+story2 = f'``Well, I am very {adjective} at the moment.`` said the {animal}. ``If you are feeling like it, would you like to go to {place} later this evening?`` queried the {object}. ``I would be {adjective2} to.`` said the {animal}.'
+story3 = f'``Well to be honest, we are going anyways no matter how you feel. So lets go!`` exclaimed the {object}. {animal} has never been to {place} before. It is a new experience and the {animal} is very {adjective3}.'
 
 
 
 # Display results
 
-
-
-
-
+print(story)
+print(story2)
+print(story3)
+print("\The program will close in one minute.")
+sleep(60)
+clr()
 
 # Thank user and quit program
 
-
+print("Thank you for interacting with the Rad-Rib [mad-lib] type program!")
+sleep(7)
+clr()
